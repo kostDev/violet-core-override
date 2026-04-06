@@ -1,0 +1,30 @@
+[package]
+name = "violet-core-override"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib", "staticlib"]
+
+[dependencies]
+# системні типи та виклики (POSIX/Unix)
+# libc = "0.2.184"
+# місток між C++ та Rust.
+# cxx = "1.0.194"
+# логування
+# log = "0.4.29"
+# env_logger = "0.11.10"
+# pобота з пам'яттю та асинхронністю
+# rayon = "1.11.0"
+# cеріалізація даних (конфіги в JSON/TOML або для обмін даними)
+# serde = { version = "1.0.228", features = ["derive"] }
+# serde_json = "1.0.149"
+rand = "0.10.0"
+
+
+[profile.release]
+# opt-level = 2
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
