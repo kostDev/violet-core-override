@@ -4,7 +4,7 @@ ACORE_ROOT="../azerothcore-wotlk"
 DEST_DIR="$ACORE_ROOT/src/server/apps/worldserver/violet"
 
 echo "--- [VioletCore] Beginning of assimilation: Rust build ---"
-cargo build --release
+cargo build --release --quiet
 
 mkdir -p "$DEST_DIR"
 

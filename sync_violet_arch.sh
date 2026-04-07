@@ -5,7 +5,7 @@ DEST_DIR="$ACORE_ROOT/src/server/apps/worldserver/violet"
 
 echo "--- [VioletCore] Beginning of assimilation: Rust build on Arch Linux ---"
 
-RUSTFLAGS="-C target-cpu=native" cargo build --release
+RUSTFLAGS="-C target-cpu=native" cargo build --release --quiet
 
 mkdir -p "$DEST_DIR"
 
